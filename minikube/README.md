@@ -9,7 +9,7 @@ following commands in PowerShell.
 If you are running Hypervisor, and don't want to open the console in Administrative mode, then add yourself to 
 Hyper-V admin group either from Computer Management UI or by running following command in PowerShell in admin mode:
 
-```shell
+```powershell
 Add-LocalGroupMember -Group "Hyper-V Administrators" -Member [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 ```
 
@@ -22,3 +22,5 @@ minikube tunnel
 ```
 
 Keep the window running the `minikube tunnel` open to 
+
+
