@@ -50,5 +50,14 @@ function kno() { kubectl get pods -o custom-columns=:metadata.name --no-headers=
 A list of PowerShell aliases can be seen in this 
 [GitHub File](https://github.com/shanoor/kubectl-aliases-powershell/blob/master/kubectl_aliases.ps1)
 
-### Run SQL command on pod
-/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <your_password>
+### Running SQL commands
+
+#### Checking login
+```shell
+kubectl exec <<pod-name>> -- /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <your_password>
+```
+
+#### Running query
+```shell
+kubectl exec <<pod-name>> -- /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <your_password> -Q "<query>"
+```

@@ -21,6 +21,6 @@ kubectl apply -f secret.yaml, persistent-volume-claim.yaml, deployment.yaml, ser
 minikube tunnel
 ```
 
-Keep the window running the `minikube tunnel` open to 
+You have to keep the window running the `minikube tunnel` open to access SQL Server from outside the cluster. 
 
 
