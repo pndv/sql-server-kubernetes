@@ -1,0 +1,13 @@
+# Minikube automatically creates a persistent-volume against a claim
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-mssql
+  labels:
+    app: ms-sql-server
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-sql-server
+  labels:
+    app: ms-sql-server
+spec:
+  type: LoadBalancer
+  selector:
+    app: ms-sql-server
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433
